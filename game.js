@@ -171,7 +171,7 @@ function one() {
 	function addPoints(p, b) {
 		p.remove();
 		score++;
-		if (score == 50) {
+		if (score == 20) {
 			screen = 3;
 		}
 	}
@@ -268,7 +268,7 @@ function final() {
 		for (var j = 0; j < flowers.length; j++) {
 			if (drops[i].hits(flowers[j])) {
 				score = score + 1;
-				if (score>=50) {
+				if (score>=30) {
 				screen=7
 		}
 				flowers.splice(j, 1);
