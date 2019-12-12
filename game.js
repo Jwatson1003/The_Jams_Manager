@@ -92,9 +92,9 @@ function setup() {
 			flowers.push(new Flower(i * 80 + 80, j * 50));
 		}
 	}
-// 	timerBeginTime = millis();
-// 	timeSetToTimer = 60000;
-// 	endingTimer = setTimeout(endTimer, timeSetToTimer);
+	timerBeginTime = millis();
+	timeSetToTimer = 60000;
+	endingTimer = setTimeout(endTimer, timeSetToTimer);
 	
 }
 
@@ -205,18 +205,18 @@ function instruction2() {
 
 function two() {
 	background(150);
-// 	timerIsRunning = true;
-// 	var timeElapsed = millis() - timerBeginTime;
-// 	var timeRemainingRounded = Math.ceil((timeSetToTimer - timeElapsed) * 0.001);
-// 	if (timerIsRunning) {
-// 		if (timeOver != true) {
-// 			textSize(20);
-// 			fill(255);
-// 			text("Time: " + timeRemainingRounded, 700, 50);
-// 		} else {
-// 			(screen = 5);
-// 		}
-// 	}
+	timerIsRunning = true;
+	var timeElapsed = millis() - timerBeginTime;
+	var timeRemainingRounded = Math.ceil((timeSetToTimer - timeElapsed) * 0.001);
+	if (timerIsRunning) {
+		if (timeOver != true) {
+			textSize(20);
+			fill(255);
+			text("Time: " + timeRemainingRounded, 700, 50);
+		} else {
+			(screen = 5);
+		}
+	}
 	stroke(255);
 	for (var i = 0; i <= random(790, 800); i += 80) {
 		line(width / 2, i + random(0, -5), width / 2, i + random(35, 40));
@@ -423,4 +423,8 @@ function keyReleased() {
 		ship.setDir(-2);
 
 	}
+}
+
+function endTimer() {
+	timeOver = true;
 }
