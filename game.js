@@ -92,6 +92,9 @@ function setup() {
 			flowers.push(new Flower(i * 80 + 80, j * 50));
 		}
 	}
+	timerBeginTime = millis();
+	timeSetToTimer = 60000;
+	endingTimer = setTimeout(endTimer, timeSetToTimer);
 	
 }
 
@@ -203,9 +206,6 @@ function instruction2() {
 function two() {
 	background(150);
 	timerIsRunning = true;
-	timerBeginTime = millis();
-	timeSetToTimer = 60000;
-	endingTimer = setTimeout(endTimer, timeSetToTimer);
 	var timeElapsed = millis() - timerBeginTime;
 	var timeRemainingRounded = Math.ceil((timeSetToTimer - timeElapsed) * 0.001);
 	if (timerIsRunning) {
