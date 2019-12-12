@@ -241,9 +241,11 @@ function two() {
 	}
 
 	if (crashCount == 0) {
-		screen = 5;
+		screen = 7;
 	}
-
+	if (timeElapsed == 6000) {
+		screen = 5
+	}
 }
 
 function instruction3() {
