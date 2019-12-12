@@ -206,6 +206,7 @@ function instruction2() {
 function two() {
 	background(150);
 	timerIsRunning = true;
+	stroke(255);
 	var timeElapsed = millis() - timerBeginTime;
 	var timeRemainingRounded = Math.ceil((timeSetToTimer - timeElapsed) * 0.001);
 	if (timerIsRunning) {
@@ -217,7 +218,6 @@ function two() {
 			(screen = 5);
 		}
 	}
-	stroke(255);
 	for (var i = 0; i <= random(790, 800); i += 80) {
 		line(width / 2, i + random(0, -5), width / 2, i + random(35, 40));
 	}
