@@ -92,6 +92,11 @@ function setup() {
 			flowers.push(new Flower(i * 80 + 80, j * 50));
 		}
 	}
+	timerIsRunning = true;
+	timerBeginTime = millis();
+	timeSetToTimer = 60000;
+	endingTimer = setTimeout(endTimer, timeSetToTimer);
+	
 }
 
 function draw() {
@@ -200,8 +205,6 @@ function instruction2() {
 }
 
 function two() {
-	timerIsRunning = true;
-	timerBeginTime = millis();
 	background(150);
 	var timeElapsed = millis() - timerBeginTime;
 	var timeRemainingRounded = Math.ceil((timeSetToTimer - timeElapsed) * 0.001);
@@ -214,9 +217,6 @@ function two() {
 			(screen = 5);
 		}
 	}
-	timerBeginTime = millis();
-	timeSetToTimer = 60000;
-	endingTimer = setTimeout(endTimer, timeSetToTimer);
 	stroke(255);
 	for (var i = 0; i <= random(790, 800); i += 80) {
 		line(width / 2, i + random(0, -5), width / 2, i + random(35, 40));
