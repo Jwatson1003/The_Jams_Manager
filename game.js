@@ -153,7 +153,7 @@ function instruction1() {
 	text('Level 1: The Creation', 400, 300);
 	textSize(10);
 	text('Pika Just Thought of a Great New Song Idea...Collect the Notes to make the song', 400, 400);
-	text('Press P to Continue', 400,500);
+	text('Press 1 to Continue', 400,500);
 }
 
 function one() {
@@ -200,7 +200,7 @@ function instruction2() {
 	text('Level 2: Get to the Studio', 400, 300);
 	textSize(10);
 	text('Congratulations You Created he Song however, soundcloud rappers are trying to stop you. Get to the Studio Before They Stop You', 400, 400);
-	text('Press P to Continue',400,500);
+	text('Press 2 to Continue',400,500);
 }
 
 function two() {
@@ -257,6 +257,7 @@ function instruction3() {
 	textSize(10);
 	text('You Got to the Studio, but the Soundcloud Boss is there...MEWTO', 400, 400);
 	text('Destroy him and his Clones...Good Luck',400,500);
+	text('Press 3 to Continue',400,600);
 }
 
 function final() {
@@ -390,16 +391,8 @@ function complete() {
 	textsize(10);
 	text('You Succesfully Published Your Song', 400,400);
 }
-	
-
-function reset() {
-	screen = 0;
-}
 
 function keyPressed() {
-	if (key == 'r') {
-		reset();
-	}
 
 	if (key === ' ') {
 		var drop = new Drop(ship.x + 20, height);
@@ -407,7 +400,16 @@ function keyPressed() {
 	}
 
 	if (key == 'p') {
-		screen = screen + 1
+		screen = 1
+	}
+	if (key == '1') {
+		screen = 2
+	}
+	if (key '2') {
+		screen = 4
+	}
+	if (key '3') {
+		screen = 6
 	}
 }
 
