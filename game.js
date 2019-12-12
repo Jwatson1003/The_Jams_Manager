@@ -147,7 +147,7 @@ function instruction1() {
 	textSize(60);
 	fill(255);
 	text('Level 1: The Creation', 400, 300);
-	textSize(20);
+	textSize(10);
 	text('Pika Just Thought of a Great New Song Idea...Collect the Notes to make the song', 400, 400);
 	text('Press P to Continue', 400,500);
 }
@@ -194,7 +194,7 @@ function instruction2() {
 	textSize(60);
 	fill(255);
 	text('Level 2: Get to the Studio', 400, 300);
-	textSize(20);
+	textSize(10);
 	text('Congratulations You Created he Song however, soundcloud rappers are trying to stop you. Get to the Studio Before They Stop You', 400, 400);
 	text('Press P to Continue',400,500);
 }
@@ -243,7 +243,7 @@ function two() {
 	}
 
 	if (crashCount == 0) {
-		screen = 7;
+		screen = 5;
 	}
 
 	function endTimer() {
@@ -258,7 +258,7 @@ function instruction3() {
 	textSize(60);
 	fill(255);
 	text('Level 3: Boss Battle', 400, 300);
-	textSize(20);
+	textSize(10);
 	text('You Got to the Studio, but the Soundcloud Boss is there...MEWTO', 400, 400);
 	text('Destroy him and his Clones...Good Luck',400,500);
 }
@@ -382,15 +382,16 @@ function gameover() {
 	textSize(60);
 	textAlign(CENTER);
 	text('GAME OVER', 400, 300);
-	text('Press R to Restart', 400, 400);
+	text('Reload to Restart', 400, 400);
 }
 
 function complete() {
 	background(money);
 	textAlign(CENTER);
-	textSize(100);
 	fill(255);
+	textSize(60);
 	text('CONGRATS',400,300);
+	textsize(10);
 	text('You Succesfully Published Your Song', 400,400);
 }
 	
